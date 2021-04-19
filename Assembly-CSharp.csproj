@@ -67,7 +67,6 @@
      <Compile Include="Assets\Script\UI\IsPurchased.cs" />
      <Compile Include="Assets\Script\UI\OpenDS.cs" />
      <Compile Include="Assets\Script\UI\OpenDailySelection.cs" />
-     <Compile Include="Assets\Script\UI\PanelSet.cs" />
      <Compile Include="Assets\Script\UI\RootButtonOnClick.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/zhaochi/test_415/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
