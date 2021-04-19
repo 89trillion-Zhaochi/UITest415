@@ -30,7 +30,7 @@ public class InitPanel : MonoBehaviour
     // "costGold": 2000,
     // "isPurchased": -1
 
-    public void Initpanel(int productId, int type, int subtype, int num, int costGold, int isPurchased)
+    public void Init(int productId, int type, int subtype, int num, int costGold, int isPurchased)
     {
         //当type=3时，对英雄图片进行加载,以及修改type字段显示
         if (type == 3)
@@ -38,8 +38,10 @@ public class InitPanel : MonoBehaviour
             Text typeText = GameObject.Find("Type").GetComponent<Text>();
             typeText.text = "Cards";
             
-            Image cardsImage = GameObject.Find("CardImage").GetComponent<Image>();
-            Texture2D img = Resources.Load("cards\\" + subtype.ToString()) as Texture2D;
+            Transform trans = GetComponent<Transform>();
+            Transform childTrans = trans.Find("CardImage");
+            Image cardsImage = childTrans.GetComponent<Image>();
+            Texture2D img = Resources.Load("Image\\cards\\" + subtype.ToString()) as Texture2D;
             Sprite pic = Sprite.Create(img, new Rect(0, 0, img.width, img.height), new Vector2(0.5f, 0.5f));
             cardsImage.sprite = pic;
             cardsImage.SetNativeSize();
@@ -55,7 +57,7 @@ public class InitPanel : MonoBehaviour
         
     }
 
-    public void Initpanel(int type, int num, int isPurchased)
+    public void Init(int type, int num, int isPurchased)
     {
         if (type == 1)
         {
@@ -64,8 +66,10 @@ public class InitPanel : MonoBehaviour
             typeText.text = "Coins";
             
             //加载显示图片
-            Image cardsImage = GameObject.Find("CardImage").GetComponent<Image>();
-            Texture2D img = Resources.Load("coin_1") as Texture2D;
+            Transform trans = GetComponent<Transform>();
+            Transform childTrans = trans.Find("CardImage");
+            Image cardsImage = childTrans.GetComponent<Image>();
+            Texture2D img = Resources.Load("Image\\coin_1") as Texture2D;
             Sprite pic = Sprite.Create(img, new Rect(0, 0, img.width, img.height), new Vector2(0.5f, 0.5f));
             cardsImage.sprite = pic;
             cardsImage.SetNativeSize();
@@ -79,8 +83,10 @@ public class InitPanel : MonoBehaviour
             typeText.text = "Diamonds";
             
             //加载显示图片
-            Image cardsImage = GameObject.Find("CardImage").GetComponent<Image>();
-            Texture2D img = Resources.Load("diamonds_2") as Texture2D;
+            Transform trans = GetComponent<Transform>();
+            Transform childTrans = trans.Find("CardImage");
+            Image cardsImage = childTrans.GetComponent<Image>();
+            Texture2D img = Resources.Load("Image\\diamond_2") as Texture2D;
             Sprite pic = Sprite.Create(img, new Rect(0, 0, img.width, img.height), new Vector2(0.5f, 0.5f));
             cardsImage.sprite = pic;
             cardsImage.SetNativeSize();

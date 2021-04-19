@@ -43,6 +43,7 @@ public class JsonDataManager : MonoBehaviour
     private void Start()
     {
         mydata = JsonUtility.FromJson<MyData>(testJson.text);
+        this.GetComponent<JsonUse>().load();
     }
 
     //设置panel的属性

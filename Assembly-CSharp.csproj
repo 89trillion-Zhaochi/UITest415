@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\Script\Base\UnitySingleton.cs" />
      <Compile Include="Assets\Script\Data\JsonDataManager.cs" />
+     <Compile Include="Assets\Script\Data\JsonUse.cs" />
      <Compile Include="Assets\Script\Data\RewardType.cs" />
      <Compile Include="Assets\Script\UI\CountDown.cs" />
      <Compile Include="Assets\Script\UI\InitPanel.cs" />
