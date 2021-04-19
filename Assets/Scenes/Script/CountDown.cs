@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
 {
     public Text text;
-    public int TotalTime = 60;
+    [FormerlySerializedAs("TotalTime")] public int totalTime = 60;
 
     void Start()
     {
@@ -15,22 +16,22 @@ public class CountDown : MonoBehaviour
 
     IEnumerator Time()
     {
-        while (TotalTime >= 0)
+        while (totalTime >= 0)
         {
-            text.text = "Refersh time:" + TotalTime.ToString();
+            text.text = "Refersh time:" + totalTime.ToString();
             yield return new WaitForSeconds(1);
-            TotalTime--;
+            totalTime--;
         }
 
-        if (TotalTime == 0)
+        if (totalTime == 0)
         {
-            TotalTime = 10;
+            totalTime = 10;
         }
     }
 
     void update()
     {
-        if (TotalTime == 0)
+        if (totalTime == 0)
         {
         }
     }

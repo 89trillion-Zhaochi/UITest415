@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class IsPurchased : MonoBehaviour
 {
     public Text text;
+
+    public Text s;
     // Start is called before the first frame update
     void Start()
     {
