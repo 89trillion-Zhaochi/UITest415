@@ -16,7 +16,7 @@ public class JsonUse : MonoBehaviour
 
     }
 
-    public void load()
+    public void loadpanel() //加载6个卡片panel的完整函数
     {
         Vector3[] panelpos = new Vector3[]//定义panel位置
         {
@@ -63,4 +63,14 @@ public class JsonUse : MonoBehaviour
         panel_6.transform.localScale = new Vector3(1,1,1);
         panel_6.transform.localPosition = panelpos[count++];
     }
+
+    public void loadpage() //加载背景page
+    {
+        GameObject panel_1 = (GameObject)Instantiate(Resources.Load("Prefabs/Daily Selection"), new Vector3(0, 0, 0f), Quaternion.Euler(new Vector4(0, 0, 0f,0)));
+        panel_1.name = "Daily Selection";//赋予预制体在场景中的名字
+        panel_1.transform.SetParent(GameObject.Find("Root").transform,true);
+        panel_1.transform.localScale = new Vector3(1,1,1);
+        panel_1.transform.localPosition = new Vector3(0, 0, 0f);
+    }
 }
+

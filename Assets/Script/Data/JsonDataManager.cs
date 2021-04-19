@@ -43,7 +43,9 @@ public class JsonDataManager : MonoBehaviour
     private void Start()
     {
         mydata = JsonUtility.FromJson<MyData>(testJson.text);
-        this.GetComponent<JsonUse>().load();
+        this.GetComponent<JsonUse>().loadpage();
+        this.GetComponent<JsonUse>().loadpanel();
+        
     }
 
     //设置panel的属性
