@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
@@ -7,9 +8,14 @@ using UnityEngine.UI;
 //使用单例模式将读取的变量作为全局变量使用，提高访问速度
 public class JsonDataManager : MonoBehaviour
 {
-    public TextAsset testJSON;
+    public TextAsset testJson;
 
     public static JsonDataManager JsonData;
+
+    private void Awake()
+    {
+        JsonData = this; //使用单例模式，将数据作为全局变量
+    }
 
     //暂时还没改完 
     //数据结构初始化
@@ -36,7 +42,7 @@ public class JsonDataManager : MonoBehaviour
 
     private void Start()
     {
-        mydata = JsonUtility.FromJson<MyData>(testJSON.text);
+        mydata = JsonUtility.FromJson<MyData>(testJson.text);
     }
 
     //设置panel的属性

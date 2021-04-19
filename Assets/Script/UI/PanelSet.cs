@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class PanelSet : MonoBehaviour
 {
     public int type;
@@ -15,7 +16,9 @@ public class PanelSet : MonoBehaviour
     public Sprite type_button;
     public int cost;
     public Color namecolor;
+
     public Text heroname;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,14 +28,13 @@ public class PanelSet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     //设置panel的属性
 
     public void Panelset()
     {
         //设置标题
-        switch(type)
+        switch (type)
         {
             case -1:
                 tname.text = "None";
@@ -61,15 +63,14 @@ public class PanelSet : MonoBehaviour
             case 7:
                 tname.text = "MasterEXP";
                 break;
-
         }
-        
-        if(type_bg)bg.sprite = type_bg;
-        if(type_cardimage)cardimage.sprite = type_cardimage;
+
+        if (type_bg) bg.sprite = type_bg;
+        if (type_cardimage) cardimage.sprite = type_cardimage;
         //button.sprite = type_button;
         bg.SetNativeSize();
         cardimage.SetNativeSize();
-        if(cost!=0)
+        if (cost != 0)
         {
             cost_text.text = cost.ToString();
         }
