@@ -58,13 +58,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scenes\Script\CountDown.cs" />
-     <Compile Include="Assets\Scenes\Script\IsPurchased.cs" />
-     <Compile Include="Assets\Scenes\Script\JsonDataManager.cs" />
-     <Compile Include="Assets\Scenes\Script\OpenDS.cs" />
-     <Compile Include="Assets\Scenes\Script\OpenDailySelection.cs" />
-     <Compile Include="Assets\Scenes\Script\PanelSet.cs" />
-     <Compile Include="Assets\Scenes\Script\RewardType.cs" />
+     <Compile Include="Assets\Script\CountDown.cs" />
+     <Compile Include="Assets\Script\IsPurchased.cs" />
+     <Compile Include="Assets\Script\JsonDataManager.cs" />
+     <Compile Include="Assets\Script\OpenDS.cs" />
+     <Compile Include="Assets\Script\OpenDailySelection.cs" />
+     <Compile Include="Assets\Script\PanelSet.cs" />
+     <Compile Include="Assets\Script\RewardType.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/zhaochi/test_415/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
