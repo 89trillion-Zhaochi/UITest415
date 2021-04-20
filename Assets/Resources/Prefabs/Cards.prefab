@@ -349,7 +349,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7922522904663203205}
-        m_MethodName: CloseDailySelection
+        m_MethodName: ispurchasedshow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

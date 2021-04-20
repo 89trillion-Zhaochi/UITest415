@@ -6,18 +6,16 @@ using System.IO;
 using UnityEngine.UI;
 
 //使用单例模式将读取的变量作为全局变量使用，提高访问速度
-public class JsonDataManager : MonoBehaviour
+public class JsonDataManager:UnitySingletonNoMB<JsonDataManager>
 {
-    public TextAsset testJson;
+    public TextAsset textJson  = Resources.Load("Json/data") as TextAsset;
 
     public static JsonDataManager JsonData;
-
     private void Awake()
     {
         JsonData = this; //使用单例模式，将数据作为全局变量
     }
-
-    //暂时还没改完 
+    
     //数据结构初始化
     [System.Serializable]
     public class DailyProduct
@@ -29,7 +27,6 @@ public class JsonDataManager : MonoBehaviour
         public int costGold;
         public int isPurchased;
     }
-
     [System.Serializable]
     public class MyData
     {
@@ -37,23 +34,22 @@ public class JsonDataManager : MonoBehaviour
         public int dailyProductCountDown;
     }
 
-    public MyData mydata = new MyData();
+    public MyData Mydata = new MyData();
 
-
-    private void Start()
+    public void GETData()
     {
-        mydata = JsonUtility.FromJson<MyData>(testJson.text);
-        this.GetComponent<JsonUse>().loadpage();
-        this.GetComponent<JsonUse>().loadpanel();
-        
+        Mydata = JsonUtility.FromJson<MyData>(textJson.text);
+        Debug.Log(Application.dataPath);
     }
 
-    //设置panel的属性
-    public Image image;
-    public Sprite sprite;
-
-    public void Panelset()
+    public void SaveData()
     {
-        image.sprite = sprite;
+        string json = JsonUtility.ToJson(Mydata);
+        StreamWriter sw = new StreamWriter("JSON\\data.json");
+        if(json.Length!=0)
+        sw.Write(json);
+        sw.Close();
+
+        // File.WriteAllLines("JSON\\data.json",json);
     }
 }

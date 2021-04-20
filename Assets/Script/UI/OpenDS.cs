@@ -27,4 +27,19 @@ public class OpenDS : MonoBehaviour
         GetComponent<CanvasGroup>().interactable = false;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
+    public void closeBSButtonOnClick()
+    {
+        //保存数据
+        JsonDataManager.Instance.SaveData();
+        //free panel
+        GameObject.Find("Root").GetComponent<JsonUse>().Freepanel();
+        //close 
+        CloseDailySelection();
+        
+        //显示OpenButton
+        GameObject ob = GameObject.Find("OpenButton");
+        ob.GetComponent<CanvasGroup>().alpha = 1;
+        ob.GetComponent<CanvasGroup>().interactable = true;
+        ob.GetComponent<CanvasGroup>().blocksRaycasts = true;
+    }
 }
