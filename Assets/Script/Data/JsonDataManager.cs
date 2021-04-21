@@ -12,6 +12,9 @@ public class JsonDataManager:Singleton<JsonDataManager>//负责解析
     {
         var dailySelectionItemJsonTextAsset = Resources.Load(jsonpath) as TextAsset;
         if (!(dailySelectionItemJsonTextAsset is null))
+        {
             dsItemData = JsonUtility.FromJson<DSItemData>(dailySelectionItemJsonTextAsset.text);
+
+        }
     }
 }
