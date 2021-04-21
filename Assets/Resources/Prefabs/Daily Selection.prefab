@@ -308,6 +308,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 2084382683665952634}
+  dsItemScript1: {fileID: 8071148764355977715, guid: d7465cf386f58499c844507c698d40c5,
+    type: 3}
+  dsItemScript2_5: {fileID: 6167244575013135469, guid: a6d0f9bd0f83e4d32986b4429897a63c,
+    type: 3}
+  dsItemScript6: {fileID: 6611102333872708446, guid: f84b42a3ed7274954bdfd68d71dba990,
+    type: 3}
 --- !u!1 &2084382683975567843
 GameObject:
   m_ObjectHideFlags: 0

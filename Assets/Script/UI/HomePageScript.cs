@@ -7,7 +7,8 @@ public class HomePageScript : MonoBehaviour
     public  GameObject root;
 
     private GameObject _ds;
-    
+
+    [SerializeField] private DailySelectionScript dailySelectionScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class HomePageScript : MonoBehaviour
         DSItemData dsItemData = new DSItemData();
         JsonDataManager.Instance.GetDataDSItem(ref dsItemData,"Json/data");
         //生成panel
-        DailySelectionScript.LoadPanel(dsItemData,_ds);
+        dailySelectionScript.LoadPanel(dsItemData,_ds);
         //打开DS
         if (_ds != null)
         {

@@ -5,6 +5,10 @@ using UnityEngine.UI;
 public class DailySelectionScript : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private DSItemScript dsItemScript1;
+    [SerializeField] private DSItemScript dsItemScript2_5;
+    [SerializeField] private DSItemScript dsItemScript6;
+    
     void Start()
     {
         CloseDailySelection();
@@ -31,7 +35,7 @@ public class DailySelectionScript : MonoBehaviour
         CloseDailySelection();
     }
     
-    public static void LoadPanel(DSItemData dsItemData,GameObject ds) //加载6个卡片panel的完整函数
+    public void LoadPanel(DSItemData dsItemData,GameObject ds) //加载6个卡片panel的完整函数
     {
         Vector3[] panelPos = new Vector3[]//定义panel位置
         {

@@ -884,6 +884,7 @@ MonoBehaviour:
   typeText: {fileID: 7922522904074223167}
   cardsImage: {fileID: 7922522904316998173}
   text: {fileID: 7922522904941264096}
+  okImage: {fileID: 7922522905699872837}
   purchasedCanvasGroup: {fileID: 7922522904663203204}
 --- !u!1 &7922522905699872858
 GameObject:
@@ -985,3 +986,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f08abe3266b409fbd705b104c31385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 0}

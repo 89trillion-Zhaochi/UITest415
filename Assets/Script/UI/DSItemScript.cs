@@ -14,6 +14,7 @@ public class DSItemScript : MonoBehaviour
     [SerializeField] private Text typeText;
     [SerializeField] private Image cardsImage;
     [SerializeField] private Text text;
+    [SerializeField] private CanvasGroup okImage;
     [SerializeField] private CanvasGroup purchasedCanvasGroup;
     public void SetPanel(int productId, int type, int subtype, int num, int costGold, int isPurchased)
     {
@@ -31,7 +32,9 @@ public class DSItemScript : MonoBehaviour
             }
         }
         text.text = costGold.ToString();
-
+        okImage.alpha = 0;
+        okImage.interactable = false;
+        okImage.blocksRaycasts = false;
     }
 
     public void SetPanel(int type, int num, int isPurchased)
@@ -55,6 +58,9 @@ public class DSItemScript : MonoBehaviour
             cardsImage.sprite = pic;
             cardsImage.SetNativeSize();
         }
+        okImage.alpha = 0;
+        okImage.interactable = false;
+        okImage.blocksRaycasts = false;
     }
 
     public void IsPurchasedShow()
@@ -62,6 +68,9 @@ public class DSItemScript : MonoBehaviour
         purchasedCanvasGroup.alpha = 0;
         purchasedCanvasGroup.interactable = false;
         purchasedCanvasGroup.blocksRaycasts = false;
+        okImage.alpha = 1;
+        okImage.interactable = true;
+        okImage.blocksRaycasts = true;
         purchaesdText.text = "Collected!";
     }
 }
