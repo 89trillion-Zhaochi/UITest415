@@ -387,6 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4187f6928974145ddb3883a445d27001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaesdText: {fileID: 8831107955554748885}
+  purchaesdButton: {fileID: 8831107954980376842}
 --- !u!1 &8831107954619359587
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,8 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49494f3651954dbe87bd1dde5740ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 8831107955554748885}
-  s: {fileID: 0}
 --- !u!225 &8831107954980376840
 CanvasGroup:
   m_ObjectHideFlags: 0

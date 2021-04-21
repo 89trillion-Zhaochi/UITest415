@@ -348,8 +348,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7922522904663203205}
-        m_MethodName: ispurchasedshow
+      - m_Target: {fileID: 6167244575013135469}
+        m_MethodName: IsPurchasedShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -382,8 +382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49494f3651954dbe87bd1dde5740ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 7922522905268008090}
-  s: {fileID: 0}
 --- !u!225 &7922522904663203204
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -894,6 +892,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4187f6928974145ddb3883a445d27001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaesdText: {fileID: 7922522905268008090}
+  purchaesdButton: {fileID: 7922522904663203206}
 --- !u!1 &7922522905699872858
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,3 +994,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f08abe3266b409fbd705b104c31385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  openButton: {fileID: 0}

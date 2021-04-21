@@ -1,41 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class HomePageScript : MonoBehaviour
 {
+    public  GameObject ob;
     // Start is called before the first frame update
     void Start()
     {
         //生成DS
-        this.GetComponent<JsonUse>().Loadpage();
+        DailySelectionScript.LoadPage();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void rootButtonOnClick()
+    
+    public void RootButtonOnClick()
     {
         //读取数据
-        JsonDataManager.Instance.GETData();
-        Debug.Log("Data has read successfully!");
+        DSItemData dsItemData = new DSItemData();
+        JsonDataManager.Instance.GetDataDSItem(ref dsItemData,"Json/data");
+        //Debug.Log();
 
         //生成panel
-        this.GetComponent<JsonUse>().Loadpanel();
+        DailySelectionScript.Loadpanel(dsItemData);
         GameObject panel = GameObject.Find("Daily Selection");
         //打开DS
         if (panel != null)
         {
-            panel.GetComponent<OpenDS>().OpenDailySelection();
+            panel.GetComponent<DailySelectionScript>().OpenDailySelection();
         }
         //隐藏button
-        GameObject ob = GameObject.Find("OpenButton");
         ob.GetComponent<CanvasGroup>().alpha = 0;
         ob.GetComponent<CanvasGroup>().interactable = false;
         ob.GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
-    
+
+    public void RootButtonshow()
+    {
+        ob.GetComponent<CanvasGroup>().alpha = 1;
+        ob.GetComponent<CanvasGroup>().interactable = true;
+        ob.GetComponent<CanvasGroup>().blocksRaycasts = true;
+    }
+   
 }

@@ -7,14 +7,16 @@ using UnityEngine.UI;
 public class CountDown : MonoBehaviour
 {
     public Text text;
-    [FormerlySerializedAs("TotalTime")] public int totalTime = 60;
+    public int totalTime = 60;
 
-    void Start()
+    IEnumerator Start()
     {
-        StartCoroutine(Time());
+        Debug.Log("starting:"+Time.time);
+        yield return StartCoroutine(TimeCountDown());
+        Debug.Log("end:"+Time.time);
     }
 
-    IEnumerator Time()
+    private IEnumerator TimeCountDown()
     {
         while (totalTime >= 0)
         {
@@ -22,17 +24,19 @@ public class CountDown : MonoBehaviour
             yield return new WaitForSeconds(1);
             totalTime--;
         }
-
-        if (totalTime == 0)
-        {
-            totalTime = 10;
-        }
+        yield return null;
     }
-
-    void update()
-    {
-        if (totalTime == 0)
-        {
-        }
-    }
+    
+    //另外一种写法,待确认
+    // void start()
+    // {
+    //     StartCoroutine(TimeCountDown());
+    // }
+    // void update()
+    // {
+    //     if (totalTime <= 0)
+    //     {
+    //         StopCoroutine(TimeCountDown());
+    //     }
+    // }
 }

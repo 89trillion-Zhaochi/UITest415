@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 2084382682915017450}
-  totalTime: 10
+  totalTime: 60
 --- !u!1 &2084382682987816970
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f08abe3266b409fbd705b104c31385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  openButton: {fileID: 3297849366525768290}
 --- !u!1 &2084382683975567843
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +503,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2084382683665952635}
-        m_MethodName: closeBSButtonOnClick
+        m_MethodName: CloseBSButtonOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
