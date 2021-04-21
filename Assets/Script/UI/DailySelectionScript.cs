@@ -4,27 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 public class DailySelectionScript : MonoBehaviour
 {
-    public Canvas root;
-
-    public Button openButton;
-    // Start is called before the first frame update
+    [SerializeField] private CanvasGroup canvasGroup;
     void Start()
     {
         CloseDailySelection();
     }
 
-    // Update is called once per frame
     public void OpenDailySelection()
     {
-        GetComponent<CanvasGroup>().alpha = 1;
-        GetComponent<CanvasGroup>().interactable = true;
-        GetComponent<CanvasGroup>().blocksRaycasts = true;
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
     }
     public void CloseDailySelection()
     {
-        GetComponent<CanvasGroup>().alpha = 0;
-        GetComponent<CanvasGroup>().interactable = false;
-        GetComponent<CanvasGroup>().blocksRaycasts = false;
+        canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+        
     }
     public void CloseBSButtonOnClick()
     {
@@ -34,9 +31,9 @@ public class DailySelectionScript : MonoBehaviour
         CloseDailySelection();
     }
     
-    public static void Loadpanel(DSItemData dsItemData,GameObject ds) //加载6个卡片panel的完整函数
+    public static void LoadPanel(DSItemData dsItemData,GameObject ds) //加载6个卡片panel的完整函数
     {
-        Vector3[] panelpos = new Vector3[]//定义panel位置
+        Vector3[] panelPos = new Vector3[]//定义panel位置
         {
             new Vector3(-352,380,0),
             new Vector3(0,380,0),
@@ -47,11 +44,11 @@ public class DailySelectionScript : MonoBehaviour
         };
         int count = 0;
         //加载第1个
-        GameObject panel_1 = (GameObject)Instantiate(Resources.Load("Prefabs/CoinorDiomands"), panelpos[count], Quaternion.Euler(new Vector4(0, 0, 0f,0)));
+        GameObject panel_1 = (GameObject)Instantiate(Resources.Load("Prefabs/CoinorDiomands"), panelPos[count], Quaternion.Euler(new Vector4(0, 0, 0f,0)));
         panel_1.name = "panel0";//赋予预制体在场景中的名字
         panel_1.transform.SetParent(ds.transform,true);
         panel_1.transform.localScale = new Vector3(1,1,1);
-        panel_1.transform.localPosition = panelpos[count++];
+        panel_1.transform.localPosition = panelPos[count++];
         panel_1.GetComponent<DSItemScript>().SetPanel(
             dsItemData.dailyProduct[count-1].type,
             dsItemData.dailyProduct[count-1].num,
@@ -60,11 +57,11 @@ public class DailySelectionScript : MonoBehaviour
         //加载第2-5个
         for (int i = 1; i < 5; i++)
         {
-            GameObject panel_2_5 = (GameObject)Instantiate(Resources.Load("Prefabs/Cards"), panelpos[count], Quaternion.Euler(new Vector3(0, 0, 0f)));
+            GameObject panel_2_5 = (GameObject)Instantiate(Resources.Load("Prefabs/Cards"), panelPos[count], Quaternion.Euler(new Vector3(0, 0, 0f)));
             panel_2_5.name = "panel"+count.ToString();//赋予预制体在场景中的名字
             panel_2_5.transform.SetParent(ds.transform,true);
             panel_2_5.transform.localScale = new Vector3(1,1,1);
-            panel_2_5.transform.localPosition = panelpos[count++];
+            panel_2_5.transform.localPosition = panelPos[count++];
             panel_2_5.GetComponent<DSItemScript>().SetPanel(
                 dsItemData.dailyProduct[count-1].productId,
                 dsItemData.dailyProduct[count-1].type,
@@ -75,11 +72,11 @@ public class DailySelectionScript : MonoBehaviour
         }
 
         //加载第6个
-        GameObject panel_6 = (GameObject)Instantiate(Resources.Load("Prefabs/Unlock"), panelpos[count], Quaternion.Euler(new Vector3(0, 0, 0f)));
+        GameObject panel_6 = (GameObject)Instantiate(Resources.Load("Prefabs/Unlock"), panelPos[count], Quaternion.Euler(new Vector3(0, 0, 0f)));
         panel_6.name = "panel"+count.ToString();//赋予预制体在场景中的名字
         panel_6.transform.SetParent(ds.transform,true); 
         panel_6.transform.localScale = new Vector3(1,1,1);
-        panel_6.transform.localPosition = panelpos[count++];
+        panel_6.transform.localPosition = panelPos[count++];
     }
 
     public static GameObject LoadPage(GameObject root) //加载背景page

@@ -307,8 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f08abe3266b409fbd705b104c31385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 0}
-  openButton: {fileID: 3297849366525768290}
+  canvasGroup: {fileID: 2084382683665952634}
 --- !u!1 &2084382683975567843
 GameObject:
   m_ObjectHideFlags: 0

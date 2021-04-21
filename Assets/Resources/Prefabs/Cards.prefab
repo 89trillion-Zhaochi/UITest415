@@ -238,7 +238,6 @@ GameObject:
   - component: {fileID: 7922522904663203200}
   - component: {fileID: 7922522904663203207}
   - component: {fileID: 7922522904663203206}
-  - component: {fileID: 7922522904663203205}
   - component: {fileID: 7922522904663203204}
   m_Layer: 5
   m_Name: Button
@@ -370,18 +369,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7922522904663203205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7922522904663203226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d49494f3651954dbe87bd1dde5740ce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!225 &7922522904663203204
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -894,6 +881,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchaesdText: {fileID: 7922522905268008090}
   purchaesdButton: {fileID: 7922522904663203206}
+  typeText: {fileID: 7922522904074223167}
+  cardsImage: {fileID: 7922522904316998173}
+  text: {fileID: 7922522904941264096}
+  purchasedCanvasGroup: {fileID: 7922522904663203204}
 --- !u!1 &7922522905699872858
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,5 +985,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f08abe3266b409fbd705b104c31385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 0}
-  openButton: {fileID: 0}

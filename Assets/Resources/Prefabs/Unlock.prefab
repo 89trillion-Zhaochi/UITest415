@@ -389,6 +389,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchaesdText: {fileID: 8831107955554748885}
   purchaesdButton: {fileID: 8831107954980376842}
+  typeText: {fileID: 8831107954619359581}
+  cardsImage: {fileID: 8831107955022196985}
+  text: {fileID: 8831107954436992435}
+  purchasedCanvasGroup: {fileID: 8831107954980376840}
 --- !u!1 &8831107954619359587
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +483,6 @@ GameObject:
   - component: {fileID: 8831107954980376836}
   - component: {fileID: 8831107954980376837}
   - component: {fileID: 8831107954980376842}
-  - component: {fileID: 8831107954980376843}
   - component: {fileID: 8831107954980376840}
   m_Layer: 5
   m_Name: Button
@@ -589,7 +592,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8831107954980376843}
+      - m_Target: {fileID: 0}
         m_MethodName: ispurchasedshow
         m_Mode: 1
         m_Arguments:
@@ -600,18 +603,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8831107954980376843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8831107954980376846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d49494f3651954dbe87bd1dde5740ce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!225 &8831107954980376840
 CanvasGroup:
   m_ObjectHideFlags: 0

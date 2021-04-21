@@ -21,7 +21,7 @@ public class HomePageScript : MonoBehaviour
         DSItemData dsItemData = new DSItemData();
         JsonDataManager.Instance.GetDataDSItem(ref dsItemData,"Json/data");
         //生成panel
-        DailySelectionScript.Loadpanel(dsItemData,_ds);
+        DailySelectionScript.LoadPanel(dsItemData,_ds);
         //打开DS
         if (_ds != null)
         {
