@@ -64,10 +64,9 @@
      <Compile Include="Assets\Script\Data\JsonDataManager.cs" />
      <Compile Include="Assets\Script\Data\RewardType.cs" />
      <Compile Include="Assets\Script\UI\CountDown.cs" />
-     <Compile Include="Assets\Script\UI\DSItemScript.cs" />
-     <Compile Include="Assets\Script\UI\DailySelectionScript.cs" />
-     <Compile Include="Assets\Script\UI\HomePageScript.cs" />
-     <Compile Include="Assets\Script\UI\ScollViewScript.cs" />
+     <Compile Include="Assets\Script\UI\DSItem.cs" />
+     <Compile Include="Assets\Script\UI\DailySelection.cs" />
+     <Compile Include="Assets\Script\UI\HomePage.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/zhaochi/test_415/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

@@ -216,7 +216,6 @@ GameObject:
   - component: {fileID: 971561757}
   - component: {fileID: 971561756}
   - component: {fileID: 971561760}
-  - component: {fileID: 971561761}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -291,18 +290,6 @@ MonoBehaviour:
   text: {fileID: 0}
   okImage: {fileID: 0}
   purchasedCanvasGroup: {fileID: 0}
---- !u!114 &971561761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971561755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f8265354b8d94c38a539b43f4bd8849, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1384728760
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +380,6 @@ GameObject:
   - component: {fileID: 1416082300}
   - component: {fileID: 1416082299}
   - component: {fileID: 1416082298}
-  - component: {fileID: 1416082301}
   m_Layer: 5
   m_Name: OpenButton
   m_TagString: Untagged
@@ -512,18 +498,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416082296}
   m_CullTransparentMesh: 0
---- !u!225 &1416082301
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1416082296}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!1 &1593965204
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +610,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71b5b56a00014c54bafce0536b5a7fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 1593965204}
-  dailySelectionScript: {fileID: 2084382683665952635, guid: b1e677e203bf1446eb4fb599267b68a2,
-    type: 3}
+  rootTS: {fileID: 1593965208}

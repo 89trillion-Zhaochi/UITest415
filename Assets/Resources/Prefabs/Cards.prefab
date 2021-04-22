@@ -886,6 +886,28 @@ MonoBehaviour:
   text: {fileID: 7922522904941264096}
   okImage: {fileID: 7922522905699872837}
   purchasedCanvasGroup: {fileID: 7922522904663203204}
+  imgList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 2800000, guid: d857b17e3e607435e8998c98a3750a07, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 2800000, guid: e599f43cf5da6496d9c3417588f4d4de, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 2800000, guid: 73d7055cda14c478b817a72bc676e282, type: 3}
+  - {fileID: 0}
+  - {fileID: 2800000, guid: 7a03164870fc3493d88b1a3a74aae5c2, type: 3}
 --- !u!1 &7922522905699872858
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f08abe3266b409fbd705b104c31385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 0}
-  dsItemScript1: {fileID: 0}
-  dsItemScript2_5: {fileID: 0}
-  dsItemScript6: {fileID: 0}
+  contentTS: {fileID: 0}
+  dsTransform: {fileID: 0}
+  panelitem: []
+  item_length: 6
