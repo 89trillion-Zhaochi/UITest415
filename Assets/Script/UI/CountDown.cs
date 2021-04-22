@@ -26,16 +26,4 @@ public class CountDown : MonoBehaviour
         }
         yield return null;
     }
-    //另外一种写法,待确认
-    // void start()
-    // {
-    //     StartCoroutine(TimeCountDown());
-    // }
-    // void update()
-    // {
-    //     if (totalTime <= 0)
-    //     {
-    //         StopCoroutine(TimeCountDown());
-    //     }
-    // }
 }

@@ -67,6 +67,7 @@
      <Compile Include="Assets\Script\UI\DSItemScript.cs" />
      <Compile Include="Assets\Script\UI\DailySelectionScript.cs" />
      <Compile Include="Assets\Script\UI\HomePageScript.cs" />
+     <Compile Include="Assets\Script\UI\ScollViewScript.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/zhaochi/test_415/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
