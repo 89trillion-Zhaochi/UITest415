@@ -7,13 +7,12 @@ public class HomePage : MonoBehaviour
 {
     [SerializeField] private Transform rootTS;
     private GameObject _ds;
-
+    [SerializeField] private GameObject dsPrefab;
     public void RootButtonOnClick()
     {
         if (_ds == null)
         {
-            _ds = (GameObject) Instantiate(Resources.Load("Prefabs/Daily Selection"), Vector3.zero,
-                Quaternion.Euler(Vector3.zero));
+            _ds = Instantiate(dsPrefab);
             _ds.GetComponent<Transform>().transform.parent = rootTS;
             _ds.name = "Daily Selection"; //赋予预制体在场景中的名字
             _ds.transform.localScale = Vector3.one;

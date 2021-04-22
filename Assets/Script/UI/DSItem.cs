@@ -16,7 +16,6 @@ public class DSItem : MonoBehaviour
     [SerializeField] private Text text;
     [SerializeField] private CanvasGroup okImage;
     [SerializeField] private CanvasGroup purchasedCanvasGroup;
-
     [SerializeField] private List<Texture2D> imgList;
 
     //int productId, int type, int subtype, int num, int costGold, int isPurchased
@@ -32,7 +31,6 @@ public class DSItem : MonoBehaviour
                     new Vector2(0.5f, 0.5f));
                 cardsImage.sprite = pic;
                 cardsImage.SetNativeSize();
-                Debug.Log(pic.name + "has been set.");
             }
         }
         text.text = dailyProduct.costGold.ToString();

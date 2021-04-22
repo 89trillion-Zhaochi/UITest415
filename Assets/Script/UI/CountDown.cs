@@ -11,9 +11,7 @@ public class CountDown : MonoBehaviour
 
     IEnumerator Start()
     {
-        Debug.Log("starting:"+Time.time);
         yield return StartCoroutine(TimeCountDown());
-        Debug.Log("end:"+Time.time);
     }
 
     private IEnumerator TimeCountDown()
