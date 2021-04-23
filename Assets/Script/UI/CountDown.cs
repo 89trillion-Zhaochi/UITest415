@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CountDown : MonoBehaviour
 {
     public Text text;
-    public int totalTime = 60;
+    public int totalTime = 10;
 
     IEnumerator Start()
     {

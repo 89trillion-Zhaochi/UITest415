@@ -33,6 +33,7 @@ public class DSItem : MonoBehaviour
                 cardsImage.SetNativeSize();
             }
         }
+
         text.text = dailyProduct.costGold.ToString();
         okImage.alpha = 0;
     }
@@ -66,6 +67,7 @@ public class DSItem : MonoBehaviour
                 cardsImage.SetNativeSize();
             }
         }
+
         okImage.alpha = 0;
     }
 
