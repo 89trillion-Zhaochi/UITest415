@@ -15,6 +15,7 @@ public class DailySelection : MonoBehaviour
     private void Start()
     {
         LoadPanel();
+        panelitem.Capacity = 7;
     }
 
     public void DestoryDailySelection()
@@ -32,30 +33,27 @@ public class DailySelection : MonoBehaviour
         int dataLength = dsItemData.dailyProduct.Length; //获取json中的数据数量
         for (int i = 0; i < dataLength; ++i)
         {
+            GameObject panel = null;
             if (dsItemData.dailyProduct[i].type == 1 || dsItemData.dailyProduct[i].type == 2) //type = 1 or 2
             {
-                GameObject panel = Instantiate(panelitem[0]);
-                panel.name = "panel" + i.ToString(); //赋予预制体在场景中的名字
-                panel.transform.parent = contentTS; //加载父子关系
-                panel.transform.localScale = new Vector3(1, 1, 1); //加载基础缩放
-                panel.GetComponent<DSItem>().SetPanel_3(dsItemData.dailyProduct[i]);
+                panel = Instantiate(panelitem[0]);
             }
             else if (dsItemData.dailyProduct[i].type == 3) //type = 3
             {
-                GameObject panel = Instantiate(panelitem[1]);
-                panel.name = "panel" + i.ToString(); //赋予预制体在场景中的名字
-                panel.transform.parent = contentTS; //加载父子关系
-                panel.transform.localScale = new Vector3(1, 1, 1); //加载基础缩放
-                panel.GetComponent<DSItem>().SetPanel_6(dsItemData.dailyProduct[i]);
+                panel = Instantiate(panelitem[1]);
             }
+
+            panel.name = "panel" + i.ToString(); //赋予预制体在场景中的名字
+            panel.transform.SetParent(contentTS, false); //加载父子关系
+            panel.transform.localScale = new Vector3(1, 1, 1); //加载基础缩放
+            panel.GetComponent<DSItem>().SetPanel(dsItemData.dailyProduct[i]);
         }
 
         //加载完JSON中的数据后，按照空闲数量生成unlock
         for (int i = dataLength; i < item_length; ++i)
         {
-            GameObject panel = Instantiate(panelitem[2]);
+            GameObject panel = Instantiate(panelitem[2], contentTS, false);
             panel.name = "panel" + i.ToString(); //赋予预制体在场景中的名字
-            panel.transform.parent = contentTS; //加载父子关系
             panel.transform.localScale = new Vector3(1, 1, 1); //加载基础缩放
         }
     }

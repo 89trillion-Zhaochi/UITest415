@@ -358,7 +358,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7922522905699872836}
+      - m_Target: {fileID: 0}
         m_MethodName: OpenDailySelection
         m_Mode: 1
         m_Arguments:
@@ -880,7 +880,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   purchaesdText: {fileID: 7922522905268008090}
-  purchaesdButton: {fileID: 7922522904663203206}
   typeText: {fileID: 7922522904074223167}
   cardsImage: {fileID: 7922522904316998173}
   text: {fileID: 7922522904941264096}
@@ -920,7 +919,6 @@ GameObject:
   - component: {fileID: 7922522905699872839}
   - component: {fileID: 7922522905699872838}
   - component: {fileID: 7922522905699872837}
-  - component: {fileID: 7922522905699872836}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -996,19 +994,3 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &7922522905699872836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7922522905699872858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21f08abe3266b409fbd705b104c31385, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contentTS: {fileID: 0}
-  dsTransform: {fileID: 0}
-  panelitem: []
-  item_length: 6
